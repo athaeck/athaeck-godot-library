@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://buabxkrc405dh"]
+[gd_scene load_steps=2 format=3 uid="uid://buabxkrc405dh"]
+
+[ext_resource type="Script" uid="uid://bytfgwkkrha36" path="res://Library/athaeck-godot-library/Scripts/Core/Controller/RTSCameraController.gd" id="1_jjv6l"]
 
 [node name="CameraPosition" type="Node3D"]
+script = ExtResource("1_jjv6l")
+
+[node name="CameraRotationX" type="Node3D" parent="."]
+
+[node name="CameraZoomPivot" type="Node3D" parent="CameraRotationX"]
+transform = Transform3D(1, 0, 0, 0, 0.76604444, 0.6427876, 0, -0.6427876, 0.76604444, 0, 32, 40)
+
+[node name="Camera3D" type="Camera3D" parent="CameraRotationX/CameraZoomPivot"]
