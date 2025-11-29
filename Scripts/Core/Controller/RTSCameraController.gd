@@ -62,10 +62,10 @@ func _process(delta):
 	var movementDirection := (transform.basis * Vector3(direction.x,0,direction.y)).normalized()
 	var zoomDirection := (int(Input.is_action_just_released("ZoomOut")) - int(Input.is_action_just_released("ZoomIn")))
 	
-	var rotate := Input.get_axis("RotateLeft","RotateRight")
+	var rotateAxis := Input.get_axis("RotateLeft","RotateRight")
 	
 	_movementTarget += _movementSpeed * movementDirection
-	_rotationTarget += rotate * _rotationSpeed
+	_rotationTarget += rotateAxis * _rotationSpeed
 	_zoomTarget += zoomDirection * _zoomSpeed
 	
 	position = lerp(position,_movementTarget,0.05)
