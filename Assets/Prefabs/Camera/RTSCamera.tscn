@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://buabxkrc405dh"]
+
+[node name="CameraPosition" type="Node3D"]
