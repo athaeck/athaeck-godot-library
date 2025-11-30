@@ -4,6 +4,11 @@
 
 [node name="CameraPosition" type="Node3D"]
 script = ExtResource("1_jjv6l")
+_movementSpeed = 5.0
+_zoomSpeed = 30.0
+_minZoom = -200.0
+_maxZoom = 200.0
+_scrollSpeed = 1.0
 
 [node name="CameraRotationX" type="Node3D" parent="."]
 
